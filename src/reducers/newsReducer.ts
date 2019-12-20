@@ -10,7 +10,7 @@ const initialState: StoreStructure = {
     withComplains: []
 }
 
-const newReducer: Reducer<any> = (state: StoreStructure, action: ActionTypeBase) => {
+export const newsReducer: Reducer<any> = (state: StoreStructure = initialState, action: ActionTypeBase) => {
     switch(action.type){
         case LOAD_NEWS:
             console.log('action LOAD_NEWS')
@@ -22,3 +22,4 @@ const newReducer: Reducer<any> = (state: StoreStructure, action: ActionTypeBase)
             return state
     }
 }
+
